@@ -1,0 +1,16 @@
+# This is a placeholder file. In a real implementation, you would:
+# 1. Download a free GLTF/GLB model from Sketchfab, Poly Pizza, or similar
+# 2. Place the actual .glb file here
+# 3. The model should be optimized for web (< 10MB recommended)
+# 4. Common headphone models available on these platforms include:
+#    - Sony WH-1000XM series style headphones
+#    - Apple AirPods Max style headphones  
+#    - Generic over-ear headphone models
+# 
+# For now, the 3D viewer component will handle the missing model gracefully
+# and show a loading state or fallback visualization.
+#
+# Example download sources:
+# - https://sketchfab.com/3d-models?features=downloadable&sort_by=-likeCount&q=headphones
+# - https://poly.pizza/search?q=headphones
+# - https://kenney.nl/assets (free low-poly assets)

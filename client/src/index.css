@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(213.3 87.8% 51.8%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 6.3% 46.3%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(210 40% 98%);
+  --muted-foreground: hsl(215.4 16.3% 46.9%);
+  --accent: hsl(42.1 92.8% 56.3%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(214.3 31.8% 91.4%);
+  --input: hsl(214.3 31.8% 91.4%);
+  --ring: hsl(221.2 83.2% 53.3%);
+  --radius: 0.5rem;
+  
+  /* Custom colors for the design */
+  --product-viewer-bg: linear-gradient(135deg, hsl(233.8 96.9% 64.7%) 0%, hsl(266.7 36.9% 50.2%) 100%);
+  --floating-controls-bg: hsla(0 0% 100% / 0.9);
+  --glass-bg: hsla(0 0% 100% / 0.8);
+  
+  /* Font families */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+.dark {
+  --background: hsl(222.2 84% 4.9%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222.2 84% 4.9%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222.2 84% 4.9%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(213.3 87.8% 51.8%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(217.2 32.6% 17.5%);
+  --secondary-foreground: hsl(210 40% 98%);
+  --muted: hsl(217.2 32.6% 17.5%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(42.1 92.8% 56.3%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(217.2 32.6% 17.5%);
+  --input: hsl(217.2 32.6% 17.5%);
+  --ring: hsl(224.3 76.3% 58%);
+  
+  /* Custom dark mode colors */
+  --product-viewer-bg: linear-gradient(135deg, hsl(234.4 89% 23.1%) 0%, hsl(259.4 54.9% 17.6%) 100%);
+  --floating-controls-bg: hsla(222.2 84% 4.9% / 0.9);
+  --glass-bg: hsla(222.2 84% 4.9% / 0.8);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .product-viewer-container {
+    background: var(--product-viewer-bg);
+  }
+  
+  .floating-controls {
+    backdrop-filter: blur(10px);
+    background: var(--floating-controls-bg);
+  }
+  
+  .glass-bg {
+    backdrop-filter: blur(10px);
+    background: var(--glass-bg);
+  }
+  
+  .product-model-placeholder {
+    background: conic-gradient(from 180deg at 50% 50%, #2563eb, #7c3aed, #db2777, #dc2626, #ea580c, #d97706, #ca8a04, #65a30d, #16a34a, #059669, #0891b2, #0284c7, #2563eb);
+    animation: rotate 8s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .control-hint {
+    animation: pulse 2s infinite;
+  }
+}
